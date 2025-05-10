@@ -6,20 +6,7 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
-    linha = ft.Container(
-        content = ft.Row(
-            controls=[
-                ft.Text("Linha 1"),
-                ft.Text("Linha 2"),
-                ft.Text("Linha 3"),
-                ft.Text("Linha 4"),
-                ft.Text("Linha 5"),
-            ],
-            spacing=30,
-            alignment=ft.MainAxisAlignment.CENTER,
-        ),
-        bgcolor="red",
-    )
+    
     coluna = ft.Column(
         controls=[
             ft.Container(
@@ -46,6 +33,19 @@ def main(page: ft.Page):
         ],
         spacing=10,  # Espaçamento entre os itens
         alignment=ft.CrossAxisAlignment.CENTER,  # Alinha no centro
+    )
+
+    linha = ft.Container(
+        content = ft.Row(
+            controls=[
+                ft.Text("Linha 1"),
+                coluna,
+                coluna
+            ],
+            spacing=30,
+            alignment=ft.MainAxisAlignment.CENTER,
+        ),
+        bgcolor="red",
     )
 
     page.add(
