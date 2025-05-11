@@ -9,7 +9,7 @@ def main(page: ft.Page):
         content=ft.Container(
             content=ft.Column(
                 [
-                    ft.Text("Titulo do Card"),
+                    ft.Text("Titulo do Card", size=20, weight=ft.FontWeight.BOLD),
                     ft.Text("Texto do Card"),
                     ft.Row(
                         [
@@ -27,6 +27,6 @@ def main(page: ft.Page):
         )
     )
 
-    page.add(card)
+    page.add(card, card)
     
 ft.app(main)
