@@ -8,7 +8,7 @@ def main(page: ft.Page):
 
     # Adiciona os componentes à página
     logo_flet = ft.Image(src="https://flet.dev/img/logo.svg", width=200, height=200)
-    imagem_local = ft.Image(src="imgs/logotipo.png", width=200, height=200)
+    imagem_local = ft.Image(src="assets/logotipo.png", width=200, height=200)
 
 
     page.add(
@@ -17,4 +17,4 @@ def main(page: ft.Page):
         ft.Text("Inserindo imagens no app", size=30, color="blue")
         )
 
-ft.app(main)
+ft.app(main, assets_dir="imgs")
